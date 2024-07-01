@@ -1,0 +1,15 @@
+create database scott;
+use scott;
+CREATE TABLE IF NOT EXISTS dept (
+    deptno INT PRIMARY KEY,
+    dname VARCHAR(20),
+    loc VARCHAR(20));
+CREATE TABLE IF NOT EXISTS emp (
+    empno INT PRIMARY KEY,
+    ename VARCHAR(20),
+    job VARCHAR(20),
+    mgr INT,
+    hiredate DATE,
+    sal DECIMAL(7, 2),
+    comm DECIMAL(7, 2),
+    deptno INT);
