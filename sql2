@@ -1,0 +1,16 @@
+use scott;
+select * from emp;
+select  ename,sal from emp;
+select ename,job,hiredate from emp;
+select * from dept;
+select dname from dept;
+select ename,sal,sal+500 from emp;
+select sal*12 from emp;
+select ename,sal*0.5 from emp;
+select ename,comm,sal,sal-300 from emp;
+select ename,hiredate,sal,sal*0.3 from emp;
+select * from emp where ename="ward";
+select ename,empno,comm,deptno,job from emp where job ="salesman";
+select dname,loc from dept where loc="new york";
+select* from emp where hiredate = "1981-05-1";
+select ename,deptno from emp where deptno = '20';
