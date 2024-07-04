@@ -1,0 +1,12 @@
+select * from emp where sal<2500;
+select * from emp where sal<1000;
+select ename from emp where job = 'salesman';
+select * from emp where sal>3000;
+select * from emp where comm<500;
+select ename,sal,deptno from emp where hiredate>'1981-12-31';
+select * from emp where ename like's%';
+select * from emp where ename like '%s';
+select ename,empno,sal,job from emp where job like's%n';
+select dname,loc from dept where  loc like'_o%';
+select job,sal from emp where ename like '%l%l%';
+select*from dept where dname like 'o___a%s';
