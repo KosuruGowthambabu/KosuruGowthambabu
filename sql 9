@@ -1,0 +1,11 @@
+select sal from emp where sal%2=0;
+select sal from emp where sal%2!=0;
+select substr(ename,1,4) from emp;
+select substr(ename,1,7) from emp;
+select substr(ename,1,3) from emp;
+select substr(job,-3) from emp;
+select job,substr(job,1,3) from emp where job = 'manager';
+select job,substr(job,-3) from emp where job = 'salesman';
+select ascii('development') from dual;
+select dname,lower(substr(dname,-5))  from dept ;
+select lower(dname) from dept ;
