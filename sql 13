@@ -1,0 +1,35 @@
+select e.ename,d.dname from emp e,dept d;
+  select e.ename,d.dname from emp e, dept d where e.ename = 'smith';
+  select e.ename,e.sal/2,e.sal,d.loc from emp e,dept d where e.job ='manager';
+  select e.ename,e.hiredate,e.sal*12,d.*,e.job from emp e,dept d where e.job in ('salesman','analyst');
+  select e.ename,d.dname from emp e,dept d where e.deptno=d.deptno;
+  select e.ename,d.dname,e.sal*12 from emp e,dept d where e.ename = 'smith' and e.deptno = 20 and e.deptno = d.deptno;
+  select e.*,d.dname,d.loc from emp e,dept d where e.sal>500 and e.deptno = d.deptno ;
+  select e.*,d.* from emp e inner join dept d on e.deptno=d.deptno;
+  select e.ename,d.*,e.sal
+  from emp e inner join dept d 
+  on e.hiredate ='1981-02-20' and e.sal between 1500 and 2000 and  e.deptno = d.deptno;
+  select * from emp;
+  select e.ename,d.dname from emp e inner join dept d on e.deptno <d.deptno;
+  select d.*,e.sal+e.sal*0.3,e.job from emp e inner join dept d on e.deptno <> d.deptno;
+  select e1.ename,e1.sal from emp e1,emp e2  where  e2.ename = 'martin'   and e1.sal = e2.sal;
+select e1.ename,e1.sal,e1.hiredate,e1.sal*1.3 
+from emp e1 ,emp e2 where e2.ename = 'scott'  and e1.deptno = e2.deptno;
+select e1.ename,e1.sal, e2.ename,e2.sal,e1.deptno from emp e1,emp e2 where e1.mgr =e2.empno ;
+select emp.*,dept.* from emp left join dept  on emp.deptno = dept.deptno;
+  select emp.*,dept.* from emp right join dept  on emp.deptno = dept.deptno;
+  
+  select emp.*,dept.* from emp left join dept  on emp.deptno = dept.deptno union all
+  select emp.*,dept.* from emp right join dept  on emp.deptno = dept.deptno;
+  select * from  emp where comm is   null;
+  SELECT ENAME,SUBSTR(JOB,1,1) FROM EMP ORDER BY ENAME  ;
+
+ SELECT 'THERE ARE A TOTAL NO OF ', COUNT(JOB),JOB  FROM EMP  GROUP BY JOB;
+ update emp set job = "manager" where ename='smith';
+ create view empdep as select ename,job from emp where sal<2000;
+ select * from empdep;
+ drop view empdep;
+ create index empdept on emp(ename,job);
+ show index from emp;
+ drop index 
+ empdept on emp;
